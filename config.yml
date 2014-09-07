@@ -27,6 +27,7 @@ template: "simple"
 #     end_tag:   '%]'
 
 session: "YAML"
+logger: "console"
 
 plugins:
   "Auth::Twitter":

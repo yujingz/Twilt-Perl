@@ -7,15 +7,19 @@ $ENV{PERL_LWP_SSL_VERIFY_HOSTNAME} = 0;
 auth_twitter_init();
 
 before sub {
-    return if request->path =~ m{/auth/twitter/callback};
+    return if request->path eq "/" or request->path =~ m{/auth/twitter/callback};
 
     if (not session('twitter_user')) {
         redirect auth_twitter_authorize_url();
     }
 };
 
+get '/home' => sub {
+  template 'home.tt'
+};
+
 get '/' => sub {
-  template 'landing.tt';
+  template 'landing.tt'
 };
 
 true;
