@@ -1,3 +1,65 @@
 <div class="row">
-  <h1>Welcome</h1>
+  <div class="col-md-12">
+    <h1>Welcome, <% name %></h1>
+    <p class="lead">Choose one to play</p>
+  </div>
+</div>
+
+<br><br>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="row">
+      <h3>Find one's tweet</h3>
+    </div>
+
+    <div class="row">
+      <br>
+      <div class="col-md-12">
+        <form id="solo-form" class="form-horizontal" action="/twilt" method="get" role="form">
+          <div class="form-group row">
+            <div class="input-group col-md-6">
+              <div class="input-group-addon">@</div>
+              <input class="form-control" name='solo_twitter_username' type="text" placeholder="Twitter username">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Recent tweets</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class='row'>
+      <h3>Find two's common follows</h3>
+    </div>
+
+    <div class='row'>
+      <br>
+      <form id="common-form" class="form-horizontal" action="/twilt" method="post" role="form">
+
+        <div class="form-group row">
+          <div class="input-group col-md-6">
+            <div class="input-group-addon">@</div>
+            <input class="form-control" type="text" name="common_twitter_username_a" placeholder="First one's Twitter username">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="input-group col-md-6">
+            <div class="input-group-addon">@</div>
+            <input class="form-control" type="text" name="common_twitter_username_a" placeholder="Second one's Twitter username">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-4">
+            <button type="submit" class="btn btn-primary">Common followers</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
 </div>
