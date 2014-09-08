@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=<% settings.charset %>" />
-    <title>tutorial</title>
+    <title>Twilt</title>
 
     <link rel="stylesheet" href="<% request.uri_base %>/css/main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
