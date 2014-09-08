@@ -34,7 +34,7 @@ get '/home' => sub {
   };
 };
 
-get '/twilt' => sub {
+post '/twilt' => sub {
   my $tweet_count = 20;
 
   if (length(params->{'solo_twitter_username'})) {
