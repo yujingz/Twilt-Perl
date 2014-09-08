@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h1>
+      <a href="http://twitter.com/<% username_a %>" target="_blank">@<% username_a %></a>
+      and <a href="http://twitter.com/<% username_b %>" target="_blank">@<% username_b %></a>'s common friends
+    </h1>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-sm-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Profile</th>
+          <th>Bio</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% FOREACH friend IN friends %>
+        <tr>
+          <td><% loop.count %></td>
+          <td>
+            <p><img src="<% friend.profile_image_url %>" class="tweet-profile-image"></img>
+            <p>@<% friend.screen_name %></p>
+          </td>
+          <td><% friend.description %></td>
+        </tr>
+        <% END %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
