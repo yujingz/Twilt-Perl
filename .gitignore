@@ -8,6 +8,6 @@ MYMETA.*
 webthumb-api.yml
 *.swp
 
-sessions/
+tmp/
 
 .DS_Store

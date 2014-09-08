@@ -29,7 +29,7 @@ plugins:
   "Auth::Twitter":
     consumer_key:     "qIiB3lLryPtzfgh8sVMI665US"
     consumer_secret:  "w0YWNIfWZyeGX2dGAKr94Xdcsppl7DB1xw8zDKzSHYWzqP9iHM"
-    callback_url:     "http://twilt.herokuapp.com/auth/twitter/callback"
+    callback_url:     "https://twilt.herokuapp.com/auth/twitter/callback"
     callback_success: "/"
     callback_fail:    "/fail"
     ssl:              1
