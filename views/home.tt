@@ -10,7 +10,7 @@
 <div class="row">
   <div class="col-md-6">
     <div class="row">
-      <h3>Find one's tweet</h3>
+      <h3>Find one's recent tweets</h3>
     </div>
 
     <div class="row">
@@ -36,7 +36,7 @@
 
     <div class='row'>
       <br>
-      <form id="common-form" class="form-horizontal" action="/twilt" method="post" role="form">
+      <form id="common-form" class="form-horizontal" action="/twilt" method="get" role="form">
 
         <div class="form-group row">
           <div class="input-group col-md-6">
@@ -48,7 +48,7 @@
         <div class="form-group row">
           <div class="input-group col-md-6">
             <div class="input-group-addon">@</div>
-            <input class="form-control" type="text" name="common_twitter_username_a" placeholder="Second one's Twitter username">
+            <input class="form-control" type="text" name="common_twitter_username_b" placeholder="Second one's Twitter username">
           </div>
         </div>
 

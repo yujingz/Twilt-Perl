@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h1><% name %>'s recent tweets</h1>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-sm-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Name</th>
+          <th>Tweet</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% FOREACH tweet IN tweets %>
+        <tr>
+          <td><% loop.count %></td>
+          <td>@<% tweet.0 %></td>
+          <td><% tweet.1 %></td>
+          <td><% tweet.2 %></td>
+        </tr>
+        <% END %>
+      </tbody>
+    </table>
+  </div>
+</div>

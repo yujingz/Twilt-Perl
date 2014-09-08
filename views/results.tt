@@ -1,5 +1,0 @@
-<ul>
-  <% FOREACH tweet IN tweets %>
-    <li><% tweet.0 %><br><% tweet.1 %></br><% tweet.2 %></li>
-  <% END %>
-</ul>

@@ -31,22 +31,26 @@ get '/twilt' => sub {
 
   if (length(params->{'solo_twitter_username'})) {
     my @results = ();
-    my $timeline = twitter->user_timeline({screen_name => "subdigital", count => $tweet_count});
+    my $timeline = twitter->user_timeline({screen_name => params->{'solo_twitter_username'}, include_rts => 1, count => $tweet_count});
 
-    my @results = ();
     for my $tweet ( @$timeline ) {
       my @item = ();
       if ( $tweet->{retweeted_status} ) {
-        @item = ( $tweet->{user}{screen_name}, $tweet->{retweeted_status}{text}, $tweet->{retweeted_status}{created_at});
+        @item = ($tweet->{entities}{user_mentions}[0]->{screen_name},
+                 $tweet->{retweeted_status}{text},
+                 $tweet->{retweeted_status}{created_at});
       } else {
-        @item = ( $tweet->{user}{screen_name}, $tweet->{text}, $tweet->{created_at});
+        @item = ($tweet->{user}{screen_name},
+                 $tweet->{text},
+                 $tweet->{created_at});
       }
 
       push @results, \@item;
     }
 
-    template 'results.tt' => {
-      tweets => \@results
+    template 'solo_results.tt' => {
+      tweets => \@results,
+      name => params->{'solo_twitter_username'}
     };
   } elsif (length(params->{'common_twitter_username_a'}) && length(params->{'common_twitter_username_b'})){
     return "Hello Common";
