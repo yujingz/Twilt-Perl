@@ -22,7 +22,6 @@ WriteMakefile(
         'Net::Twitter'                  => 4.01005,
         'Dancer::Plugin::Auth::Twitter' => 0.06,
         'Template'                      => 2.25,
-        'Dancer::Session::Cookie'       => 0.25,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'Twilt-Perl-*' },
