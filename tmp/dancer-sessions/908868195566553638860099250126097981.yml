@@ -1,0 +1,6 @@
+--- !!perl/hash:Dancer::Session::YAML
+access_token: ''
+access_token_secret: ''
+id: 908868195566553638860099250126097981
+request_token: SwWkrNPUYH9nEhm7zuyfT0r0V21WM3wE
+request_token_secret: OVhhXbrxfXVyPHHnu1zv1I5jlGw0d4nF

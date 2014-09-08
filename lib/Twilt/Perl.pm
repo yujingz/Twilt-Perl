@@ -23,6 +23,11 @@ get '/' => sub {
   }
 };
 
+get '/signout' => sub {
+  session->destroy;
+  redirect '/';
+};
+
 get '/home' => sub {
   template 'home.tt' => {
     name => session('twitter_user')->{"name"}
@@ -72,7 +77,7 @@ get '/twilt' => sub {
 
     my $common_friends = twitter->lookup_users({user_id => join(',', @intersect)});
 
-    template 'common_Results.tt' => {
+    template 'common_results.tt' => {
       username_a => params->{'common_twitter_username_a'},
       username_b => params->{'common_twitter_username_b'},
       friends => \@$common_friends
